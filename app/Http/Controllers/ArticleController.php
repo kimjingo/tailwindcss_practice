@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Http\Resources\ArticleResource;
+use Carbon\Carbon;
 
 class ArticleController extends Controller
 {
@@ -40,6 +41,9 @@ class ArticleController extends Controller
     public function update(Request $request, Article $article)
     {
         $article->fill($request->input());
+        if($request->input('completed')){
+            $article->completed_at = Carbon::now();
+        }
         $article->save();
         return $article;
     }

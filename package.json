@@ -22,10 +22,12 @@
         "sass-loader": "^11.0.1",
         "tailwindcss": "^3.0.23",
         "vue": "^2.6.12",
-        "vue-loader": "^16.8.3",
+        "vue-loader": "^15.9.8",
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
-        "vue": "^3.2.31"
+        "@fortawesome/fontawesome-svg-core": "^6.1.1",
+        "@fortawesome/free-solid-svg-icons": "^6.1.1",
+        "@fortawesome/vue-fontawesome": "^2.0.6"
     }
 }

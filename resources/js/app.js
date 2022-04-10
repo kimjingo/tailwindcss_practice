@@ -18,8 +18,22 @@ window.Vue = require('vue').default;
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { faPlusSquare, faTrash } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faPlusSquare, faTrash, faUserSecret)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
+Vue.config.productionTip = false
+
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('app', require('./vue/app.vue').default);
+
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

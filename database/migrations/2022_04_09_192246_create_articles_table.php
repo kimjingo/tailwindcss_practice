@@ -16,7 +16,8 @@ class CreateArticlesTable extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('body');
+            $table->text('body')->nullable();
+            $table->datetime('completed_at')->nullable();
             $table->timestamps();
         });
     }
